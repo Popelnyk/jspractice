@@ -68,5 +68,68 @@ obj1.__proto__ = 5;
 console.log(obj1);    //[object Object]
 
 ///////////////////////////////////////////
+console.log('-------------------');
 
+let user5 = {
+    age: 10,
+    foo: true,
+};
+
+let key2 = 'age';
+console.log(user5.age === undefined, user5.name === undefined);
+console.log(key2 in user5, 'name' in user5);
+
+
+let obj3 = {
+    test: undefined,
+};
+
+//!!!!
+console.log(obj3.test === undefined);
+console.log('test' in obj3);
+
+///////////////////////////////////////////
+console.log('-------------------');
+
+let user6 = {
+    name: "John",
+    age: 30,
+    isAdmin: true
+};
+
+for (let prop in user6) {
+    console.log(prop, user6[prop]);
+}
+
+///////////////////////////////////////////
+console.log('-------------------');
+
+let user7 = {
+    name: 'John',
+};
+
+let almostUser7 = {
+    name: 'John',
+};
+
+let admin = user7;
+
+user7.name = 'Adam';
+console.log(user7);
+console.log(admin);
+
+console.log(admin === user7);
+console.log(user7 === almostUser7);
+
+const user8 = {
+    name: 'John',
+};
+
+user8.name = 'Steve';
+/*
+    error
+    user8 = {
+        name: 'R',
+    };
+ */
 
