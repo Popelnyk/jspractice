@@ -133,3 +133,31 @@ user8.name = 'Steve';
     };
  */
 
+//Флаги и дескрипторы свойств. (!!!!!!)
+
+
+//cloning objects
+console.log('-------------------');
+
+let userForCopies = {
+    name: 'John',
+    age: 45,
+};
+
+let permissions = {
+    canView: true,
+    canWrite: false,
+};
+
+let rules = {
+    wayToTheShop: 'left left right',
+};
+
+Object.assign(userForCopies, permissions, rules);
+console.log(userForCopies);
+
+Object.assign(userForCopies, {name: 'Clown'});
+console.log(userForCopies);
+
+let clone = Object.assign({}, userForCopies);
+console.log(clone, clone === userForCopies);
