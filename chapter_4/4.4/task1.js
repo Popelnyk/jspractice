@@ -6,19 +6,18 @@ let calculator = {
         let x = prompt('enter x');
         let y = prompt('enter y');
 
-        if (typeof this.x === 'string' && typeof this.y === 'string'
-            && typeof +x === 'number' && typeof +y === 'number') {
+        if (Number.isFinite(+x) && Number.isFinite(+y)) {
             this.x = +x;
             this.y = +y;
         }
     },
 
     sum() {
-        return this.x + this.y;
+            return this.x + this.y;
     },
 
     mul() {
-        return this.x * this.y;
+            return this.x * this.y;
     },
 };
 
