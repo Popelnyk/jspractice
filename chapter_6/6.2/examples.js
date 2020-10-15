@@ -1,4 +1,5 @@
 function sumArgs(...args) {
+    console.log(typeof args);
     let result = 0;
     for (let item of args) {
         result += item;
